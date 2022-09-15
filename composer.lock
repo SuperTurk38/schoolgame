@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38502997fa55a569457451bc432b924f",
+    "content-hash": "2b90fd3f2b5f652f868db27c10efd175",
     "packages": [
         {
             "name": "brick/math",
@@ -5454,27 +5454,23 @@
         },
         {
             "name": "laravel/breeze",
-            "version": "v1.13.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/breeze.git",
-                "reference": "3b601e881820c36dc0252cc5fa6c4131a8e5734d"
+                "reference": "e98e855ab4bde5bf0083c4a4d73c0f5b474241ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/breeze/zipball/3b601e881820c36dc0252cc5fa6c4131a8e5734d",
-                "reference": "3b601e881820c36dc0252cc5fa6c4131a8e5734d",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/e98e855ab4bde5bf0083c4a4d73c0f5b474241ae",
+                "reference": "e98e855ab4bde5bf0083c4a4d73c0f5b474241ae",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "^9.21",
-                "illuminate/filesystem": "^9.21",
-                "illuminate/support": "^9.21",
-                "illuminate/validation": "^9.21",
-                "php": "^8.0.2"
-            },
-            "conflict": {
-                "laravel/framework": "<9.19.0"
+                "illuminate/filesystem": "^8.42|^9.0",
+                "illuminate/support": "^8.42|^9.0",
+                "illuminate/validation": "^8.42|^9.0",
+                "php": "^7.3|^8.0"
             },
             "type": "library",
             "extra": {
@@ -5511,7 +5507,7 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
-            "time": "2022-09-05T14:26:39+00:00"
+            "time": "2022-06-28T11:52:06+00:00"
         },
         {
             "name": "laravel/pint",
