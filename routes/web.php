@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', [PagesController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 Route::get('/mijnprofiel', [PagesController::class, 'mijnprofiel'])->middleware(['auth'])->name('mijnprofiel');
+
+Route::get('file-upload', [FileUploadController::class, 'index']);
+Route::post('store', [FileUploadController::class, 'store']);
 
 require __DIR__.'/auth.php';
