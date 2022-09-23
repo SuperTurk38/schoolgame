@@ -16,19 +16,18 @@ class FileUploadController extends Controller
     {
 
         $validatedData = $request->validate([
-            'file' => 'required:csv,txt,xlx,xls,pdf,jpg|max:10048',
+            'file' => 'required:csv,txt,xlx,xls,pdf,jpg,img,png|max:10048',
 
         ]);
 
         $name = $request->file('file')->getClientOriginalName();
-
         $path = $request->file('file')->store('public/files');
 
-
-        $save = new File;
+        $save = new File();
 
         $save->name = $name;
         $save->path = $path;
+        $save->save();
 
         return redirect('file-upload')->with('status', 'File Has been uploaded successfully in laravel');
 
