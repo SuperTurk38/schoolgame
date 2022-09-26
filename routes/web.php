@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\TeamsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,7 @@ Route::get('/mijnprofiel', [PagesController::class, 'mijnprofiel'])->middleware(
 Route::get('file-upload', [FileUploadController::class, 'index'])->middleware(['auth'])->name('mijnprofiel');
 Route::post('store', [FileUploadController::class, 'store'])->middleware(['auth']);
 
+Route::group(['prefix' => 'dashboard', 'middelware' => 'auth'], function () {
+   Route::resource('teams', TeamsController::class);
+});
 require __DIR__.'/auth.php';

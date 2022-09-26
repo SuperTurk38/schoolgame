@@ -16,17 +16,12 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
+                            @foreach( $teams as $team)
+                                <th scope="row">1</th>
+                                <td>{{ $team->name }}</td>
+                            @endforeach
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                        </tr>
+
                         </tbody>
                     </table>
                 </div>
