@@ -24,7 +24,7 @@ class TeamsController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard/teams/create');
     }
 
     /**
@@ -35,7 +35,13 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $team = new Team();
+        $team->name = $request->teamnaam;
+        $team->team_docent = $request->team_docent;
+        $team-> save();
+
+        return redirect()->route('teams.show');
+
     }
 
     /**
