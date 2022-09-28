@@ -10,6 +10,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">First</th>
+                            <th scope="col">Aanpassen</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -17,6 +18,8 @@
                             <tr>
                                 <th scope="row">{{ $team->id }}</th>
                                 <td>{{ $team->name }}</td>
+                                <td><a href="{{route('teams.edit', $team->id)}}" class="btn btn-info">Aanpassen</a>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

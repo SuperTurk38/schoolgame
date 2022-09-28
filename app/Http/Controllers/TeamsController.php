@@ -36,10 +36,16 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'team_docent' => 'required'
+        ]);
+
         $team = new Team();
         $team->name = $request->teamnaam;
         $team->team_docent = $request->team_docent;
         $team-> save();
+
 
         return redirect()->route('teams.index');
 
@@ -65,7 +71,8 @@ class TeamsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $team = Team::findOrFail($id);
+        return view('dashboard/teams/edit')->with('team',$team);
     }
 
     /**
@@ -77,7 +84,18 @@ class TeamsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $this->validate($request, [
+           'name' => 'required',
+           'team_docent' => 'required'
+        ]);
+
+        $team = Team::findOrFail($id);
+        $team->name = $request->name;
+        $team->team_docent = $request->team_docent;
+        $team->save();
+
+        return back();
     }
 
     /**
