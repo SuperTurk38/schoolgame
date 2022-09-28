@@ -14,7 +14,8 @@ class TeamsController extends Controller
      */
     public function index()
     {
-        //
+        $team = Team::all();
+        return view('dashboard/teams/index')->with('team', $team);
     }
 
     /**
@@ -40,7 +41,7 @@ class TeamsController extends Controller
         $team->team_docent = $request->team_docent;
         $team-> save();
 
-        return redirect()->route('teams.show');
+        return redirect()->route('teams.index');
 
     }
 

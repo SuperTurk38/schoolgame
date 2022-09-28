@@ -5,29 +5,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <table class="table">
-                        <thead class="thead-dark">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            @foreach( $teams as $team)
-                                <th scope="row">1</th>
+                        @foreach( $teams as $team)
+                            <tr>
+                                <th scope="row">{{ $team->id }}</th>
                                 <td>{{ $team->name }}</td>
-                            @endforeach
-                        </tr>
-
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
                 <div class="col-sm">
                     <div class="card">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ Auth::user()->name }}</h5>
                             <p class="card-text">{{ Auth::user()->description }}</p>
@@ -35,8 +32,8 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <table class="table">
-                        <thead class="thead-dark">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">First</th>
