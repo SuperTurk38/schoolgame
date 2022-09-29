@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group m-3">
             <label for="">Wat is het team naam?</label>
-            <input type="text" name="teamnaam">
+            <input type="text" name="name">
         </div>
         <div class="form-group m-3">
             <label for="">Wie is de docent?</label>

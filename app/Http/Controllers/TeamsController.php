@@ -41,10 +41,11 @@ class TeamsController extends Controller
             'team_docent' => 'required'
         ]);
 
+
         $team = new Team();
-        $team->name = $request->teamnaam;
+        $team->name = $request->name;
         $team->team_docent = $request->team_docent;
-        $team-> save();
+        $team->save();
 
 
         return redirect()->route('teams.index');
