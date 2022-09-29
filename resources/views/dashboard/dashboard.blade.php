@@ -11,6 +11,7 @@
                             <th scope="col">#</th>
                             <th scope="col">First</th>
                             <th scope="col">Aanpassen</th>
+                            <th scope="col">Verwijderen</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -19,6 +20,12 @@
                                 <th scope="row">{{ $team->id }}</th>
                                 <td>{{ $team->name }}</td>
                                 <td><a href="{{route('teams.edit', $team->id)}}" class="btn btn-info">Aanpassen</a>
+                                <td>
+                                    <form action="{{route('teams.destroy', $team->id)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="submit" value="verwijderen" class="btn btn-danger">
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
